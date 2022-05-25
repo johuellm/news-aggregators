@@ -20,7 +20,7 @@ People increasingly use personalizing news aggregators for acquiring news online
     personalization, finding that filter bubbles stemming from low news diversity are unlikely.
 
 **Authors:**
-- Joschka A. Huellmann <j.huellmann@utwente.nl>
+- Joschka A. Hüllmann <j.huellmann@utwente.nl>
 - Leonard W. Sensmeier <l_sens01@uni-muenster.de>
 
 **Date:** 2022-05-25
