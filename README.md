@@ -5,7 +5,8 @@ Source code for the online experiment on personalizing news aggregators.
 The crawler simulates user activity and downloads news articles.
 The analysis predicts the impact of various personalized profiles on the news diversity of various news websites.
 
-Abstract:
+**Abstract:**
+
 People increasingly use personalizing news aggregators for acquiring news online.
     Despite benefits such as more relevance, risks such as filter bubbles have been elicited.
     So far, there is little empirical evidence on how personalization affects the news diversity
@@ -18,9 +19,8 @@ People increasingly use personalizing news aggregators for acquiring news online
     websites with a difference of <5%. Our results contribute empirical insights to the debate on news
     personalization, finding that filter bubbles stemming from low news diversity are unlikely.
 
-Authors:
-Joschka A. Huellmann <j.huellmann@utwente.nl>
-Leonard W. Sensmeier <l_sens01@uni-muenster.de>
+**Authors:**
+- Joschka A. Huellmann <j.huellmann@utwente.nl>
+- Leonard W. Sensmeier <l_sens01@uni-muenster.de>
 
-Date:
-2022-05-25
+**Date:** 2022-05-25
