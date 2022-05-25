@@ -31,8 +31,7 @@ class spiegelRss:
     def getAllArticles(self):
         '''
         Method to return all articles of the loaded RSS feed.
-        Each article is also called. Therefore one second is waited after 
-        the call of each source code is waited
+        Each article is also called with a one second delay.
 
         Returns:
             Array

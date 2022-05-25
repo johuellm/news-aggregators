@@ -131,7 +131,7 @@ class databaseInterface:
 
     def saveSpiegelRss(self, articles, source):
         '''
-        Method to store a collected mirror RSS feed in the MongoDB database.
+        Method to store a collected Spiegel Online RSS feed in the MongoDB database.
         For each source Rss feed all articles are stored.
         The data is stored according to the following scheme:
 
@@ -166,7 +166,7 @@ class databaseInterface:
 
     def saveWNRss(self, articles, source):
         '''
-        Method to store a collected mirror RSS feed in the MongoDB database.
+        Method to store a collected Spiegel Online RSS feed in the MongoDB database.
         For each source Rss feed all articles are stored.
         The data is stored according to the following scheme:
 

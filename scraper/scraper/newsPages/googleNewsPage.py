@@ -34,7 +34,6 @@ class GoogleNewsPage:
     def getArticleArea(self):
         '''
         Extracts article area from HTML. And sets self.articleArea as the HTML code.
-
         Returns:
             Html Code des Artikelbereichs
         '''
@@ -61,8 +60,8 @@ class GoogleNewsPage:
     def getArticlesFromArticleArea(self):
         '''
         Method for extracting the individual articles from the article area
-        Searches all tiles in the article area. All articles are then searched in the tiles.
-        All tiles saved with associated articles.
+        Searches for all tiles in the article area. All articles are then extracted from the tiles.
+        All tiles are saved with associated articles.
         Returns:
             List of all tiles in structured form:
             tileType: singleField or multifield. Type of tile
@@ -119,7 +118,7 @@ class GoogleNewsPage:
     def getArticlesFromPanoramaArea(self):
         '''
         Method for extracting the individual items from the panorama area
-        Searches all tiles in the panorama area. All articles are then searched in the tiles.
+        Searches all tiles in the panorama area. All articles are then extracted from the tiles.
         All tiles with associated articles are saved.
         Returns:
             List of all tiles in structured form:
@@ -158,7 +157,7 @@ class GoogleNewsPage:
     def getAllArticles(self):
         '''
         Method to extract all single items
-        Searches all tiles. All articles are then searched in the tiles.
+        Searches for all tiles. All articles are then extracted from the tiles.
         All tiles saved with associated articles.
         Returns:
             List of all tiles in structured form:

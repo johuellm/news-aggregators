@@ -19,7 +19,6 @@ def googleNews(personalizerInstance,  databaseInterfaceInstance, sessionNr):
     and this information is stored in the database.
     The Personalizer and Database Interface instances are passed to perform the collection of 
     Google News with other actions of the same browser and database connection.
-    database connection. 
     The sessionNr is used to store any executed sessions in the database. 
     stored.
 
@@ -51,9 +50,7 @@ def flipBoard(personalizerInstance,  databaseInterfaceInstance, sessionNr):
     and this information is stored in the database.
     The Personalizer and Database Interface instances are passed in to perform the collection of 
     Flipboard with other actions of the same browser and database connection.
-    database connection. 
     The sessionNr is used to store any executed sessions in the database. 
-    stored.
 
     Parameters:
         personalizerInstance :
@@ -77,7 +74,7 @@ def flipBoard(personalizerInstance,  databaseInterfaceInstance, sessionNr):
 
 def googleNewsAndFlipboard(personalizerInstance,  databaseInterfaceInstance, sessionNr):
     '''
-    Method to raise Google News and Flipboard one by one.
+    Method to access Google News and Flipboard one by one.
     Parameters:
         personalizerInstance :
             The instance of the personalizer class to use for personalization.
@@ -139,8 +136,8 @@ def spiegel(databaseInterfaceInstance):
 def testPersonalization(personalizerInstance,  databaseInterfaceInstance, sessionNr):
     '''
     Method for collecting the interests in the Google News account settings. 
-    The account settings of the Google profile are called up and the source code of the profile is
-    of the profile is stored in the database.
+    The account settings of the Google profile are accessed and the source code of the profile is
+    stored in the database.
 
     Parameters:
         databaseInterfaceInstance:
@@ -161,13 +158,12 @@ def main():
     Here the main process of the program is defined. 
     The commands from the command line are translated.
     Subsequently, a database connection is established.
-    If the Westfälische Nachrichten or Spiegel Online should be collected, they will be collected
-    and the program is terminated.
-    If actions are executed in the browser, a Personalizer instance is created.
-    Then, if specified, a session is executed and saved.
-    Subsequently, if specified, Google News, Flipboard or Google News and Flipboard will be collected, 
-    or the personalization profile is saved.
-    The Personalizer instance is then closed. 
+    If specified the Westfälische Nachrichten or Spiegel Online rss feeds are colleted.
+    If personalization steps are specified, a Personalizer instance is created.
+    Then a session is executed and saved.
+    Subsequently, if specified, Google News, Flipboard or Google News and Flipboard are collected 
+    and the personalization profile is saved.
+    The browser is then closed
     '''
 
     # Übersetzung der Commandline Argumente
@@ -228,7 +224,6 @@ if __name__ == "__main__":
     '''
     Logging is started at this point. 
     If an exception is sent at any point in the code, it is stored in the log.
-    will be stored in the log. 
     The main function is then executed. 
     '''
     logging.basicConfig(format='%(module)s %(levelname)s %(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p',

@@ -17,7 +17,7 @@ class personalizer:
 
     '''
     A class that performs personalization in the context of this work.
-    Functions of the class are to start Chrome with a saved
+    Functions of the class are to start Chrome with a
     saved Chrome profile, calling multiple URLs with this
     Chrome profile and calling Flipboard or Google News.
     '''
@@ -39,12 +39,11 @@ class personalizer:
 
     def createDriver(self):
         '''
-        Method to create a parameterized geckodriver.
-        The geckodriver was parameterized for use with Firefox.
+        Method to create a geckodriver instance for use with Firefox.
         Parameterization is explained in the code.
-        The profile is duplicated by Firefox when using the chrome driver.
+        The profile is duplicated by Firefox when using the geckodriver.
         For this reason the geckodriver must be closed using the closeDriver() function of this
-        class must be closed 
+        class
         '''
         profile = webdriver.FirefoxProfile(
             self.profilePath+self.profileName)
@@ -81,7 +80,7 @@ class personalizer:
     def closeDriver(self):
         '''
         Method to close the driver
-        The profile is copied from the temporary folder to the profilefolder.
+        The profile is copied from the temporary folder to the profile folder.
         '''
 
         mozprofile = self.driver.capabilities["moz:profile"]
@@ -105,11 +104,8 @@ class personalizer:
     def __waitForElementByXpath(self, xpath, timeout=10):
         '''
         Helper method to automate waiting for a browser element. 
-        This method was created instead of fixed wait times to start time on 
-        the execution.
-        It waits at most the time "timeout" until an Xpath appears in the dom
-        appears. Then the element is returned as Selenium web element 
-        is returned. 
+        It waits at most the time "timeout" for an Xpath to appear in the DOM. 
+        Then the element is returned as a Selenium web element.
 
         Parameters:
             xpath: 
@@ -132,11 +128,8 @@ class personalizer:
     def __waitForElementsByXpath(self, xpath, timeout=10):
         '''
         Helper method to automate waiting for multiple browser elements. 
-        This method was created instead of fixed wait times to start time on 
-        the execution.
-        It waits at most the time "timeout" until an element appears in the dom
-        appears. Then the group of elements matching the Xpath will be
-        is returned as a Selenium web element. 
+        It waits at most the time "timeout" for multiple elements to appear in the DOM. 
+        Then the group of elements matching the Xpath is returned as a Selenium web element. 
 
         Parameters: 
             xpath: 
@@ -159,10 +152,9 @@ class personalizer:
     def __openLinkOfElem(self, elem):
         '''
         Method to find the URL of a web item and open it.
-        It would be better to click on the links by click method of the web element, 
-        as this would correspond to the user's behavior and the tracking would be
-        tracking would be more realistic. In tests, however, this has led to detection by Google's Bot
-        Detection by Google. 
+        It would be better to click on the links by the click method of the web element, 
+        as this would more closely simulate to the user behavior. 
+        In tests, however, this has led to detection by Bot Detection on Google. 
 
         Parameters: 
             elem: 
@@ -176,9 +168,9 @@ class personalizer:
 
     def performSession(self, session, shuffleSession=True):
         '''
-        Method to load the list of websites and xpaths stored in the config to 
-        confirm tracking, Youtube search, Google search,
-        Amazon search and ebay search. 
+        Method to load the list of websites and xpaths stored in the config to:
+        - confirm tracking, search Youtube, search Google, search
+        Amazon and search ebay. 
 
         Parameters
             session: 
@@ -234,7 +226,7 @@ class personalizer:
         if it appears.
         1. the URL is called
         2. if cookiePopupXpath is passed, a specified time is waited until the banner appears.
-        If the cookie banner appears, it is acknowledged. 
+        If the cookie banner appears, it is confirmed. 
         The time to wait is set in config.py under timeToWaitForCookieBanner.
         3. there is a timeout for as long as specified under delay in config.py
 
@@ -471,11 +463,11 @@ class personalizer:
     def accessGoogleNews(self, scroll=True):
         '''
         Method to open Google News. 
-        After the call of Google News a time is waited deposited in the config.py under delay
+        After the call of Google News a time which is specified in config.py under delay is waited
 
         Parameters:
             scroll:bool
-                Should be scrolled down on Google News.
+                scroll down on the website
 
         Returns:
             output: Dict
@@ -499,7 +491,7 @@ class personalizer:
     def accessFlipboard(self):
         '''
         Method to open Flipboard. 
-        After calling Flipboard it waits for a time defined in config.py under delay.
+        After calling Flipboard the program waits for a time defined in config.py under delay.
 
         Returns:
             output: Dict
@@ -529,7 +521,7 @@ class personalizer:
 
     def getGoogleAdProfile(self):
         '''
-        Open Google's "Personalized Advertising" ad and return some elements
+        Open Google's "Personalized Advertising" tab and returns the HTML
         Returns:
             Array
                 time, html, profil
